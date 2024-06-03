@@ -1,6 +1,6 @@
 services:
   verandb:
-    build: https://github.com/wichmann/veranstaltungsdatenbank.git
+    build: https://github.com/TatiMir/PHPTodoList.git
     image: verandb
     restart: always
     ports:
