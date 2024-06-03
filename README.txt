@@ -72,15 +72,39 @@
 
 13. Deployment der Web-App „Todo-Listen-Verwaltung“ als Container:
 
-     - instalieren Visual Studio Code
-            $ sudo apt update
-            $ sudo apt install software-properties-common apt-transport-https
-            $ wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-            $ sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-            $ sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-     
-     - installieren Docker in Visual Studion Code;
-     - erstellen Datai "Dockerfile.txt";
-     - erfahren Docker Version: docker -v;
-     - docker build -t python-imdp .
+OHNE DOCKER COMPOSE!!!!!!!!!!!!!!
+
+    $ sudo apt-get update
+    ~ $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    ~ $ sudo docker run hello-world
+
+    ~ $ sudo docker volume create portainer_data
+
+    ~ $ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+
+
+    ~ $ docker run -p 9000:9000
+    ~ $ docker ps
+
+    Muss portainer restart:
+
+    ~ $ sudo docker restart portainer
+    $ docker run -p 9000:9000
+
+    Dann gehen wir:  localhost:9443
+
+    Schreiben wir login und password: admin (portaineradmin - passswort)
+
+    Get started - local - Containers
+
+    Unsere container erstellen:
+
+    Add container - Name (TodoListContainer) - Image (homeassistant/home-assistant)
+
+    Restart policy - Always
+
+    Network - schreiben wir unsere network, hostname - Deploy the container
+
+
+
      
