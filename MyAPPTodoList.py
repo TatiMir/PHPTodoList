@@ -3,11 +3,11 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__, template_folder="templates")
 
 
-todos =[{"task": "Sample Todo", "done": False}]
+todos =[]
 
 @app.route("/")
 def index():
-    return render_template("Index1.html", todos=todos)
+    return render_template("Index.html", todos=todos)
 
 
 @app.route("/add", methods=["POST"])
@@ -29,8 +29,8 @@ def edit(index):
 
 @app.route("/check/<int:index>")
 def check (index):
-    todos[index]['done'] = not todos[index]['done']
-    return redirect(url_for("index"))
+      todos[index]['done'] = not todos[index]['done']
+      return redirect(url_for("index"))
 
 
 @app.route("/delete/<int:index>")

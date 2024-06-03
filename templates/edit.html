@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit</title>
+    <style>
+        .modal{
+                padding: 50px;
+                background: #dfdfdf;
+                position: fixed; top: 50%; left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        }
+        /*  */
+            a{
+                text-decoration: none;
+            }
+    </style>
 </head>
 <body>
-    
+    <div class="modal">
+    <form action="{{url_for('edit', index=index)}}" method="post">
+    <input type="text" name="todo" value="{{ todo['task'] }}">
+    <button type="submit">Save</button>
+    </form> 
+    </div>
 </body>
 </html>
