@@ -69,3 +69,11 @@
 
     sudo systemctl enable ssh
     sudo systemctl start ssh
+
+13. Deployment der Web-App „Todo-Listen-Verwaltung“ als Container:
+
+     - installieren Docker in Visual Studion Code;
+     - erstellen Datai "Dockerfile.txt";
+     - erfahren Docker Version: docker -v;
+     - docker build -t python-imdp .
+     
