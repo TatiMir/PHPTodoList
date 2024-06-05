@@ -92,6 +92,7 @@ OHNE DOCKER COMPOSE!!!!!!!!!!!!!!
     $ docker run -p 9000:9000
 
     Dann gehen wir:  localhost:9443
+    admin, portaineradmin
 
     Schreiben wir login und password: admin (portaineradmin - passswort)
 
