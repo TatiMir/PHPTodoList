@@ -106,6 +106,9 @@ OHNE DOCKER COMPOSE!!!!!!!!!!!!!!
 
     Network - schreiben wir unsere network, hostname - Deploy the container
 
+14. Container mit docker.compose:
+
+
 
 
      
